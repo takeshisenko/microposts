@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     end
   end
   
-   def following
+  def followings
     @user = User.find(params[:id])
     followingall = Relationship.where(follower_id: params[:id])
     @following_users = Array.new
