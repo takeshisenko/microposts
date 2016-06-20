@@ -1,0 +1,13 @@
+<div class="row">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= link_to @user.name, user_path %>
+      </h1>
+</div>
+
+    <br>
+    <% @following_users.each do |user| %>
+    <%= gravatar_for user, :size => '40x40' %>
+    <%= link_to user.name, user_path(:id => user.id) %><br><br><br>
+    <% end %>
+    
