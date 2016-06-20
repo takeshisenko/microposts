@@ -33,3 +33,12 @@ class User < ActiveRecord::Base
     Micropost.where(user_id: following_user_ids + [self.id])
   end
 end
+
+# 　取得アイテムとして表示する
+
+# 未払いアイテムとして表示する
+
+# 取得失敗アイテムとして表示する
+
+# 各画像をアップロードする
+

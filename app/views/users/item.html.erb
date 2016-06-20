@@ -1,0 +1,31 @@
+<!--アイテムを一覧表示する-->
+
+
+<!--取得アイテム-->
+<!--画像-->
+
+
+<!--未払いアイテム-->
+
+
+<!--取得失敗アイテム-->
+<!--期限超過-->
+
+<!--一旦肉OK-->
+
+<div class="row">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= link_to @user.name, user_path %>
+      </h1>
+</div>
+
+    <br>
+    <% @follower_users.each do |follower| %>
+      <br>
+      <%= gravatar_for follower %>
+      <br>
+      <br>
+      <%= link_to follower.name, user_path %>
+      <br>
+    <% end %>
